@@ -41,7 +41,7 @@ namespace Lab4
                             Console.WriteLine(txtFile);
                             Console.WriteLine("The text file has {0} words.", StringOperators.WordCount(txtFile));
                             Console.WriteLine("The text file has {0} vowels", StringOperators.CharCount(txtFile, true));
-                            Console.WriteLine("The text file has {0} letters", StringOperators.CharCount(txtFile, false));
+                            Console.WriteLine("The text file has a string value of {0}", StringOperators.CharCount(txtFile, false));
                             Console.WriteLine("Press any key to continue...");
                             Console.ReadKey();
                         }
@@ -114,7 +114,7 @@ namespace Lab4
             }
             else
             {
-                Console.WriteLine("Either the file already exists.");
+                Console.WriteLine("The file already exists.");
                 Console.WriteLine("Press any key to continue...");
                 Console.ReadKey();
             }

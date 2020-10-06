@@ -28,12 +28,20 @@ class StringOperators
         }
         else
         {
-            //Counts the amount of alphabetic characters in the string.
+            //Counts the string value by matching characters and adding the value by using the index of the letterArr
+            char[] usrCharInput = usrInput.ToCharArray();
+
             foreach (char v in letterArr)
             {
-                intCharCount += usrInput.Split(v).Length;
+                foreach (char c in usrCharInput)
+                {
+                    if (c == v)
+                    {
+                        intCharCount += Array.IndexOf(letterArr, v) + 1;
+                    }
+                }
             }
-            return intCharCount - letterArr.Length;
+            return intCharCount;
         }
     }
     public static int WordCount(string usrInput)
